@@ -7,7 +7,7 @@ try:
     cursor = conexao.cursor()
 
     # Execução de um comando
-    comando = '''CREATE TABLE pessoa (
+    comando = '''CREATE TABLE Pessoa (
         cpf INTERGER NOT NULL,
         nome  TEXT NOT NULL,
         nascimento DATE NOT NULL,
