@@ -31,5 +31,10 @@ cursor.execute(comando2, vars(veiculo1))
 cursor.execute(comando2, vars(veiculo2))
 cursor.execute(comando2, vars(veiculo3))
 cursor.execute(comando2, vars(veiculo4))
+
+# Efetivando o comando
 conexao.commit()
 
+# Fechamento das conexões
+cursor.close()
+conexao.close()
