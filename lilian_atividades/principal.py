@@ -4,7 +4,7 @@ conexao = None
 cursor = None
 
 try:
-    conexao = conector.connect("meu_banco.db")
+    conexao = conector.connect("lilian_atividades\meu_banco.dblilian_atividades\meu_banco.db")
 
 except conector.DatabaseError as erro:
     print("Erro de Banco de Dados", erro)
