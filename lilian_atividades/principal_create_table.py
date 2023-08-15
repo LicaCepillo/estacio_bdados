@@ -5,12 +5,13 @@ cursor = None
 
 try:
     conexao = conector.connect("lilian_atividades\meu_banco.db")
-    conexao.execute ("PRAGMA foreign_keys = on")
+   
     cursor = conexao.cursor()
 
-    #comando = '''DROP TABLE Municipio; '''
+    #comando = '''DROP TABLE Populacao; '''
     #cursor.execute (comando)
 
+    
     comando1 = '''CREATE TABLE Municipio(
                 codigo INTEGER NOT NULL,
                 nome VARCHAR(31) NOT NULL,
@@ -21,6 +22,7 @@ try:
     comando2 = '''CREATE TABLE Populacao (
                 codigo INTEGER NOT NULL,
                 ano INTEGER NOT NULL,
+                populacao INTEGER NOT NULL,
                 PRIMARY KEY(codigo, ano),
                 FOREIGN KEY(codigo) REFERENCES Municipio(codigo)
                 );'''
@@ -36,6 +38,7 @@ try:
     cursor.execute(comando3)
 
     conexao.commit()
+
 except conector.OperationalError as erro:
     print("Erro Operacional", erro)
 except conector.DatabaseError as erro:
