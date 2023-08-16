@@ -6,7 +6,7 @@ conexao = None
 cursor = None
 
 
-     
+    
 conexao = conector.connect("lilian_atividades\meu_banco.db")
 cursor = conexao.cursor()
 

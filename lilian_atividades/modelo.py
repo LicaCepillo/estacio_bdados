@@ -14,3 +14,6 @@ class Dengue:
         self.codigo = codigo
         self.ano = ano
         self.casos = casos
+
+        
+      
