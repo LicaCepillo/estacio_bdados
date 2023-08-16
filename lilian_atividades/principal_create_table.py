@@ -5,13 +5,11 @@ cursor = None
 
 try:
     conexao = conector.connect("lilian_atividades\meu_banco.db")
-   
     cursor = conexao.cursor()
 
-    #comando = '''DROP TABLE Populacao; '''
+    #comando = '''DROP TABLE Municipio; '''
     #cursor.execute (comando)
 
-    
     comando1 = '''CREATE TABLE Municipio(
                 codigo INTEGER NOT NULL,
                 nome VARCHAR(31) NOT NULL,
@@ -37,6 +35,7 @@ try:
                 );'''
     cursor.execute(comando3)
 
+    
     conexao.commit()
 
 except conector.OperationalError as erro:
